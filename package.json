@@ -1,0 +1,22 @@
+{
+  "name": "rndmem-npm-skeleton",
+  "version": "0.0.0",
+  "description": "NPM project template",
+  "keywords": [
+    "npm",
+    "skeleton",
+    "template"
+  ],
+  "homepage": "https://github.com/rndmem/rndmem-npm-skeleton",
+  "repository": "github:rndmem/rndmem-npm-skeleton",
+  "bugs": "https://github.com/rndmem/rndmem-npm-skeleton/issues",
+  "main": "build/rndmem-npm-skeleton.js",
+  "scripts": {
+    "preversion": "[ -z \"$(git status -z)\" ]",
+    "postversion": "git push origin \"$(git tag --points-at HEAD)\" && npm publish"
+  },
+  "engines": {
+    "node": "7.6.0"
+  },
+  "license": "GPL-3.0"
+}
