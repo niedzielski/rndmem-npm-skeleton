@@ -1,5 +1,7 @@
 # ☠️ rndmem-npm-skeleton
 
+## [Changelog](doc/changelog.md)
+
 ## License (GPLv3 and CC BY-SA 4.0)
 © 2017 Stephen Niedzielski. All code is licensed under GPLv3. All other content
 is licensed under CC BY-SA 4.0.
