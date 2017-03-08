@@ -12,11 +12,29 @@
   "bugs": "https://github.com/rndmem/rndmem-npm-skeleton/issues",
   "main": "build/rndmem-npm-skeleton.js",
   "scripts": {
+    "lint": "rndlint",
+    "prebuild": "npm run -s lint .",
+    "build": ":",
+    "pretest": "npm run -s build",
+    "test": ":",
     "preversion": "[ -z \"$(git status -z)\" ]",
-    "postversion": "git push origin \"$(git tag --points-at HEAD)\" && npm publish"
+    "postversion": "git push origin \"$(git tag --points-at HEAD)\" && npm publish",
+    "upgrade": "ncu -atu",
+    "clobber": "rm -rf node_modules .eslintcache"
   },
   "engines": {
     "node": "7.6.0"
+  },
+  "devDependencies": {
+    "eslint": "3.16.1",
+    "eslint-config-rndmem": "8.0.0",
+    "eslint-plugin-eslint-comments": "1.0.0",
+    "eslint-plugin-jsdoc": "2.4.0",
+    "eslint-plugin-json": "1.2.0",
+    "eslint-plugin-node": "4.1.0",
+    "eslint-plugin-promise": "3.4.2",
+    "npm-check-updates": "2.10.3",
+    "pre-commit": "1.2.2"
   },
   "license": "GPL-3.0"
 }
