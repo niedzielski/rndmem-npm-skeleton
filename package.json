@@ -16,7 +16,7 @@
     "lint": "rndlint",
     "build": "jspm build --minify \"$npm_package_config_index_file\" \"$npm_package_main\"",
     "pretest": "npm run -s build && npm run -s lint .",
-    "test": "mocha --opts \"$npm_package_config_test_dir/mocha.opts\" \"$npm_package_config_test_dir\"",
+    "test": "mocha",
     "clean": "rm -rf \"$npm_package_config_build_dir\"",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
@@ -25,8 +25,7 @@
     "clobber": "rm -rf node_modules jspm_packages .eslintcache"
   },
   "config": {
-    "test_dir": "src/test/js",
-    "index_file": "src/main/js/index.js",
+    "index_file": "src/index.js",
     "build_dir": "build"
   },
   "engines": {

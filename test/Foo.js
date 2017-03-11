@@ -1,5 +1,5 @@
 import assert from 'assert'
-import skeleton from '../../../build/rndmem-npm-skeleton'
+import skeleton from '../build/rndmem-npm-skeleton'
 
 describe('Foo', () => {
   describe('bar()', () => {

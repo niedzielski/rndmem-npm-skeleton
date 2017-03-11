@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/main/js/Foo.js","../src/main/js/index.js"],"names":["bar","Foo","index"],"mappings":"4LAAA,IAAMA,GAAM,iBAAA,IAEZC,OAAAD,GCAAE,OAAAD","file":"rndmem-npm-skeleton.js"}
+{"version":3,"sources":["../src/Foo.js","../src/index.js"],"names":["bar","Foo","index"],"mappings":"4LAAA,IAAMA,GAAM,iBAAA,IAEZC,OAAAD,GCAAE,OAAAD","file":"rndmem-npm-skeleton.js"}
