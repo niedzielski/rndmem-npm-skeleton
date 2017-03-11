@@ -14,9 +14,8 @@
   "scripts": {
     "watch": "live-server",
     "lint": "rndlint",
-    "prebuild": "npm run -s lint .",
     "build": "jspm build --minify \"$npm_package_config_index_file\" \"$npm_package_main\"",
-    "pretest": "npm run -s build",
+    "pretest": "npm run -s build && npm run -s lint .",
     "test": "mocha --opts \"$npm_package_config_test_dir/mocha.opts\" \"$npm_package_config_test_dir\"",
     "clean": "rm -rf \"$npm_package_config_build_dir\"",
     "preversion": "[ -z \"$(git status -z)\" ]",
