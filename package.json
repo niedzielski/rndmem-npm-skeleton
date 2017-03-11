@@ -14,15 +14,14 @@
   "scripts": {
     "watch": "live-server",
     "lint": "rndlint",
-    "prebuild": "run-s -s lint\\ .",
+    "prebuild": "npm run -s lint .",
     "build": "jspm build --minify \"$npm_package_config_index_file\" \"$npm_package_main\"",
-    "pretest": "run-s -s build",
+    "pretest": "npm run -s build",
     "test": "mocha --opts \"$npm_package_config_test_dir/mocha.opts\" \"$npm_package_config_test_dir\"",
     "clean": "rm -rf \"$npm_package_config_build_dir\"",
-    "preversion": "[ -z \"$(git status -z)\" ] && git symbolic-ref --short HEAD",
-    "postversion:commit": "git add \"$npm_package_config_build_dir\" && git commit --allow-empty -m \"release: $(git tag --points-at HEAD)\"",
-    "postversion:push": "git push --follow-tags origin master",
-    "postversion": "run-s -s clean test postversion:commit postversion:push && npm publish",
+    "preversion": "[ -z \"$(git status -z)\" ]",
+    "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
+    "postversion": "git push origin \"$(git tag --points-at HEAD)\" && npm publish",
     "postinstall": "jspm i",
     "upgrade": "ncu -atu && jspm update",
     "clobber": "rm -rf node_modules jspm_packages .eslintcache"
@@ -49,7 +48,6 @@
     "live-server": "1.2.0",
     "mocha": "3.2.0",
     "npm-check-updates": "2.10.3",
-    "npm-run-all": "4.0.2",
     "pre-commit": "1.2.2"
   },
   "jspm": {
