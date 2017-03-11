@@ -6,7 +6,7 @@ describe('Foo', () => {
     const bar = skeleton.Foo.bar
 
     it('return val', () => {
-      assert.deepEqual(bar(), 2)
+      assert.deepEqual(bar(), 1)
     })
   })
 })

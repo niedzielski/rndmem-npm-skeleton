@@ -1,4 +1,4 @@
-const bar = () => 2
+const bar = () => 1
 
 export default {
   bar
