@@ -20,7 +20,7 @@
     "clean": "rm -rf \"$npm_package_config_build_dir\"",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
-    "postversion": "git push origin \"$(git tag --points-at HEAD)\" && npm publish",
+    "postversion": "git push --follow-tags origin HEAD && npm publish",
     "upgrade": "ncu -atu"
   },
   "config": {

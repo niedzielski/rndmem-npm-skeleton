@@ -1,3 +1,6 @@
+### v0.0.4
+- Fix: push commits with tag in postversion script
+
 ### v0.0.3
 - Fix: NPM postinstall script
 - Fix: test import lint failure on clean build
