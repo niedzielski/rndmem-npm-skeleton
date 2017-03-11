@@ -1,2 +1,2 @@
-!function(a,b){"object"==typeof exports&&"undefined"!=typeof module?b(exports):"function"==typeof define&&define.amd?define(["exports"],b):b(a.src=a.src||{})}(this,function(a){"use strict";var b=function(){return 1},c={bar:b},d={Foo:c};a.default=d,Object.defineProperty(a,"__esModule",{value:!0})});
+!function(a,b){"object"==typeof exports&&"undefined"!=typeof module?b(exports):"function"==typeof define&&define.amd?define(["exports"],b):b(a.src=a.src||{})}(this,function(a){"use strict";var b=function(){return 2},c={bar:b},d={Foo:c};a.default=d,Object.defineProperty(a,"__esModule",{value:!0})});
 //# sourceMappingURL=rndmem-npm-skeleton.js.map
