@@ -21,8 +21,7 @@
     "preversion": "[ -z \"$(git status -z)\" ]",
     "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
     "postversion": "git push origin \"$(git tag --points-at HEAD)\" && npm publish",
-    "postinstall": "jspm i",
-    "upgrade": "ncu -atu && jspm update",
+    "upgrade": "ncu -atu",
     "clobber": "rm -rf node_modules jspm_packages .eslintcache"
   },
   "config": {
