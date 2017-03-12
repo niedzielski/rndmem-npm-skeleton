@@ -14,17 +14,19 @@
   "scripts": {
     "watch": "live-server",
     "lint": "rndlint",
-    "build": "jspm build --minify \"$npm_package_config_index_file\" \"$npm_package_main\"",
+    "build": "jspm build --minify \"$npm_package_config_index_js\" \"$npm_package_main\"",
     "pretest": "npm run -s build && npm run -s lint .",
-    "test": "mocha",
+    "test": "mocha && npm run -s validate:html \"$npm_package_config_index_htm\"",
     "clean": "rm -rf \"$npm_package_config_build_dir\"",
+    "validate:html": "html-validator --verbose --file",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
     "postversion": "git push --follow-tags origin HEAD && npm publish",
     "upgrade": "ncu -au"
   },
   "config": {
-    "index_file": "src/index.js",
+    "index_js": "src/index.js",
+    "index_htm": "static/index.htm",
     "build_dir": "build"
   },
   "engines": {

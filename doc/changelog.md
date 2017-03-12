@@ -1,3 +1,7 @@
+### v0.1.0
+- New: HTML template
+- Chore: upgrade dependencies
+
 ### v0.0.4
 - Fix: push commits with tag in postversion script
 
