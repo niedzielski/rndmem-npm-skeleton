@@ -21,7 +21,7 @@
     "preversion": "[ -z \"$(git status -z)\" ]",
     "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
     "postversion": "git push --follow-tags origin HEAD && npm publish",
-    "upgrade": "ncu -atu"
+    "upgrade": "ncu -au"
   },
   "config": {
     "index_file": "src/index.js",
