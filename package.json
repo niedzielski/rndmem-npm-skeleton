@@ -16,9 +16,10 @@
     "lint": "rndlint",
     "build": "jspm build --minify \"$npm_package_config_index_js\" \"$npm_package_main\"",
     "pretest": "npm run -s build && npm run -s lint .",
-    "test": "mocha && npm run -s validate:html \"$npm_package_config_index_htm\"",
+    "test": "mocha && npm run -s validate:html \"$npm_package_config_index_htm\" && npm run -s validate:css \"$npm_package_config_index_css\"",
     "clean": "rm -rf \"$npm_package_config_build_dir\"",
     "validate:html": "html-validator --verbose --file",
+    "validate:css": "css-validator",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "version": "npm run -s clean && npm -s t && git add \"$npm_package_config_build_dir\"",
     "postversion": "git push --follow-tags origin HEAD && npm publish",
@@ -27,6 +28,7 @@
   "config": {
     "index_js": "src/index.js",
     "index_htm": "static/index.htm",
+    "index_css": "static/index.css",
     "build_dir": "build"
   },
   "engines": {
@@ -35,6 +37,7 @@
   "devDependencies": {
     "babel-preset-env": "1.2.1",
     "babel-register": "6.23.0",
+    "css-validator": "0.7.0",
     "eslint": "3.17.1",
     "eslint-config-rndmem": "9.0.0",
     "eslint-plugin-eslint-comments": "1.0.0",

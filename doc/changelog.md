@@ -1,3 +1,6 @@
+### v0.2.0
+- New: CSS validation
+
 ### v0.1.0
 - New: HTML template
 - Chore: upgrade dependencies
