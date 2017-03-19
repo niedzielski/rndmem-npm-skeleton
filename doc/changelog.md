@@ -1,3 +1,6 @@
+### v0.2.1
+- Chore: upgrade css-validator to v0.8.0
+
 ### v0.2.0
 - New: CSS validation
 
