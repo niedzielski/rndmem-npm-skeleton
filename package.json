@@ -14,23 +14,20 @@
   "scripts": {
     "watch": "live-server",
     "lint": "rndlint",
-    "build": "jspm build --minify \"$npm_package_config_index_js\" \"$npm_package_main\"",
+    "build": "jspm build --minify src/index.js \"$npm_package_main\"",
     "pretest": "npm run -s build && npm run -s lint .",
-    "test": "mocha && npm run -s validate:html \"$npm_package_config_index_htm\" && npm run -s validate:css \"$npm_package_config_index_css\"",
-    "clean": "rm -rf \"$npm_package_config_build_dir\"",
+    "test": "mocha && npm run -s validate:html static/index.htm && npm run -s validate:css static/index.css",
+    "clean": "rm -rf build/",
     "validate:html": "html-validator --verbose --file",
     "validate:css": "css-validator",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "postversion": "git push --follow-tags origin HEAD && npm publish",
-    "prepare": "npm run -s clean && npm -s t",
+    "prepublish": "npm run -s clean && npm -s t",
     "upgrade": "ncu -au"
   },
-  "config": {
-    "index_js": "src/index.js",
-    "index_htm": "static/index.htm",
-    "index_css": "static/index.css",
-    "build_dir": "build"
-  },
+  "files": [
+    "build"
+  ],
   "engines": {
     "node": "7.6.0"
   },

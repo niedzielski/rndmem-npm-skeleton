@@ -1,3 +1,6 @@
+### v0.2.5
+- Fix: publish build dir
+
 ### v0.2.4
 - Fix: build after installing
 
