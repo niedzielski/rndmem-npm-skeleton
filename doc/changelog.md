@@ -1,3 +1,6 @@
+### v0.2.2
+- Chore: don't version build/
+
 ### v0.2.1
 - Chore: upgrade css-validator to v0.8.0
 
