@@ -1,3 +1,6 @@
+### v0.2.3
+- Fix: build before publishing
+
 ### v0.2.2
 - Chore: don't version build/
 
