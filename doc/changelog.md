@@ -1,3 +1,6 @@
+### v0.2.4
+- Fix: build after installing
+
 ### v0.2.3
 - Fix: build before publishing
 

@@ -22,7 +22,7 @@
     "validate:css": "css-validator",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "postversion": "git push --follow-tags origin HEAD && npm publish",
-    "prepublish": "npm run -s clean && npm -s t",
+    "prepare": "npm run -s clean && npm -s t",
     "upgrade": "ncu -au"
   },
   "config": {
