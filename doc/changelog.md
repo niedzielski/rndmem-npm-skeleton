@@ -1,3 +1,6 @@
+### v0.2.6
+- Chore: upgrade dependencies
+
 ### v0.2.5
 - Fix: publish build dir
 
