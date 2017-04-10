@@ -14,17 +14,22 @@
   "scripts": {
     "watch": "live-server",
     "lint": "rndlint",
+    "lint:all": "npm run -s lint .",
     "build": "jspm build --minify src/index.js \"$npm_package_main\"",
-    "pretest": "npm run -s build && npm run -s lint .",
+    "pretest": "npm run -s build",
     "test": "mocha && npm run -s validate:html static/index.htm && npm run -s validate:css static/index.css",
     "clean": "rm -rf build/",
     "validate:html": "html-validator --verbose --file",
     "validate:css": "css-validator",
     "preversion": "[ -z \"$(git status -z)\" ]",
     "postversion": "git push --follow-tags origin HEAD && npm publish",
-    "prepublish": "npm run -s clean && npm -s t",
+    "prepublish": "npm run -s clean && npm -s t && npm run -s lint:all",
     "upgrade": "ncu -au"
   },
+  "pre-commit": [
+    "lint:all",
+    "test"
+  ],
   "files": [
     "build"
   ],

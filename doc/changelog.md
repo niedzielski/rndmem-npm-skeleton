@@ -1,6 +1,7 @@
 ### v0.2.7
 - Chore: upgrade dependencies
 - Chore: prefer arrow callback in tests
+- Chore: separate linting from tests
 
 ### v0.2.6
 - Chore: upgrade dependencies
