@@ -1,3 +1,6 @@
+### v0.2.7
+- Chore: prefer arrow callback in tests
+
 ### v0.2.6
 - Chore: upgrade dependencies
 

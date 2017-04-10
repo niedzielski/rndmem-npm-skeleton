@@ -2,13 +2,12 @@ import assert from 'assert'
 
 import skeleton from '../build/rndmem-npm-skeleton'
 
-describe('Foo', function() {
-  describe('bar()', function() {
+describe('Foo', () => {
+  describe('bar()', () => {
     const bar = skeleton.Foo.bar
 
-    it('return val', function(done) {
+    it('return val', () => {
       assert.deepEqual(bar(), 1)
-      done()
     })
   })
 })
